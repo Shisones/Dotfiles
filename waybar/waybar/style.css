@@ -1,0 +1,165 @@
+* {
+    border: none;
+    font-family: Fira, Roboto, Arial, sans-serif;
+    font-size: 12px;
+    color: #C8D0E0;
+    border-radius: 20px;
+}
+
+tooltip * {
+    color: #C8D0E0;
+    text-shadow: none;
+    background: #25282D;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #25282D;
+}
+
+window {
+	font-weight: bold;
+}
+
+window#waybar {
+    background: rgba(0, 0, 0, 0);
+}
+/*-----module groups----*/
+.modules-right {
+	background-color: #2E3238;
+    margin: 10px 10px 0 0;
+    border: 2px solid #5E81AC;
+    box-shadow: 0 0 3px #25282D;
+}
+.modules-center {
+	background-color: #25282D;
+    margin: 10px 0 0 0;
+    border: 2px solid #5E81AC;
+    box-shadow: 0 0 3px #25282D;
+}
+.modules-left {
+    margin: 10px 0 0 10px;
+    padding: 0 3px 0 0;
+	background-color: #25282D;
+    border: 2px solid #5E81AC;
+    box-shadow: 0 0 3px #25282D;
+}
+
+#systray {
+	background-color: #2E3238;
+}
+
+/*-----modules indv----*/
+#workspaces button {
+    padding: 0 2px;
+    background-color: transparent;
+}
+#workspaces button:hover {
+    box-shadow: inherit;
+}
+
+#workspaces button.focused {
+	background-color: #5E81AC;
+}
+
+#battery,
+#clock,
+#cpu,
+#memory,
+#temperature,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#custom-power,
+#custom-menu,
+#custom-media-logo,
+
+#clock {
+    background-color: #2E3238;
+    border-radius: 100px;
+    margin: 0 0;
+    padding: 0 10px 0 10px;
+}
+
+#cpu {
+    background-color: #25282D;
+}
+
+#memory {
+    background-color: #25282D;
+}
+
+#idle_inhibitor {
+    padding: 0 10px;
+}
+#mode {
+    color: #cc3436;
+    font-weight: bold;
+}
+#custom-power {
+    background-color: #BF616A;
+    color: #25282D;
+    border-radius: 100px;
+    margin: 3px 3px;
+    padding: 1px 0px 1px 4px;
+}
+
+#custom-name {
+    border-radius: 100px;
+    margin: 0 0;
+    padding: 0 6px 0 6px;
+}
+
+#custom-media-logo {
+    background-color: #A3BE8C;
+    color: #25282D;
+    border-radius: 100px;
+    margin: 3px 3px;
+    padding: 1px 0px 1px 4px;
+}
+
+@keyframes blink-update {
+	to {
+        color: #BF616A;
+	}
+}
+
+#custom-pacman {
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+    padding: 0px 0px 0px 4px;
+    margin: 1px 1px;
+
+
+}
+#custom-pacman.pending-updates {
+	animation-name: blink-update;
+	animation-duration: 3s;
+    padding-right: 3px;
+}
+
+#custom-pacman.updated {
+    color: #A3BE8C;
+}
+
+/*-----Indicators----*/
+#idle_inhibitor.activated {
+    color: #2dcc36;
+}
+#pulseaudio.muted {
+    color: #cc3436;
+}
+#battery.charging {
+    color: #2dcc36;
+}
+#battery.warning:not(.charging) {
+	color: #e6e600;
+}
+#battery.critical:not(.charging) {
+    color: #cc3436;
+}
+#temperature.critical {
+    color: #cc3436;
+}
+
+

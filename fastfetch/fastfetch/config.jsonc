@@ -27,12 +27,12 @@
         {
             "type": "cpu",
             "key": "\u001b[90m│\u001b[34m  CPU  :",
-            "format": "{1}\u001b[1m\u001b[90m │"
+            "format": "Intel(R) Core(TM) i3-12100\u001b[1m\u001b[90m │"
         },
         {
             "type": "gpu",
             "key": "\u001b[90m│\u001b[34m 󰹑 GPU  :",
-            "format": "{1} {2}\u001b[1m\u001b[90m     │"
+            "format": "NVIDIA GeForce GTX 1650S\u001b[1m\u001b[90m   │"
         },
         {
             "type": "memory",

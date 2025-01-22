@@ -44,19 +44,15 @@ alias nv='nvim'
 alias vim='nvim'
 alias snv='sudo nvim'
 alias py='python'
-alias gpt='chatgpt-cli'
 alias cat='bat --theme TwoDark'
 alias cd='z'
 alias preview='fzf --preview="bat --color=always {}"'
-alias mongo='mongosh'
 
 # System-related commands
 alias root='sudo -i'
 alias shutdown='shutdown -h now'
 alias system='sudo systemctl'
 alias process='ps aux | grep'
-alias dinamik='ssh dinamik@cpdinamik.kemakom.org -i ~/.ssh/shisones_id -p 65337'
-alias get_report='scp  -i ~/.ssh/shisones_id -P 65337 dinamik@cpdinamik.kemakom.org:/home/dinamik/Secret/intruder.log ./; cat intruder.log; rm intruder.log'
 
 # Functions
 extract () {
@@ -85,15 +81,15 @@ extract () {
 eval "$(thefuck --alias)"
 eval "$(zoxide init bash)"
 
-. "$HOME/.cargo/env"
-
 # Welcome Neofetch
 echo ""
 fastfetch -c ~/.config/fastfetch/config.jsonc
 echo ""
 
-# Prompt 
+# Hyprland-related
+alias config='nv ~/.config/'
 
+# Prompt 
 WHITE="\[\033[01;37m\]"
 GRAY="\[\033[01;30m\]"
 LIGHT_BLUE="\033[01;36m\]"
