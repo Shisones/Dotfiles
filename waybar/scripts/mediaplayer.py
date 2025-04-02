@@ -21,7 +21,6 @@ def signal_handler(sig, frame):
     # loop.quit()
     sys.exit(0)
 
-
 class PlayerManager:
     def __init__(self, selected_player=None, excluded_player=[]):
         self.manager = Playerctl.PlayerManager()

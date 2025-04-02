@@ -14,8 +14,7 @@
     ],
     "modules-right": [
         "group/mediaplayer", 
-        "pulseaudio", 
-        "network", 
+        "group/sysinfo", 
         "custom/power"
     ],
     
@@ -30,6 +29,14 @@
         "modules": [
             "custom/name",
             "tray"
+        ]
+    },
+
+    "group/sysinfo": {
+        "orientation": "inherit",
+        "modules": [
+            "pulseaudio",
+            "network"
         ]
     },
 
@@ -51,7 +58,8 @@
         "format": "{icon}",
         "format-icons": {
             "default": "",
-            "active": ""
+            "active": "",
+            "special": ""
         },
         "show-special": true,
         "persistent-workspaces": {
@@ -66,15 +74,15 @@
     },
     "network": {
         "format-wifi": "   {essid} ({signalStrength}%) ",
-        "format-ethernet": "   {ipaddr}",
+        "format-ethernet": "   Ethernet",
         "format-disconnected": " ", 
         "max-length": 50,
-        "tooltip-format": "\n   {bandwidthUpBits}\n   {bandwidthDownBits}\n",
+        "tooltip-format": "󰩟   {ipaddr}\n   {bandwidthUpBits}\n   {bandwidthDownBits}",
         "on-click": "nm-connection-editor"
     },
 
     "clock": {
-        "tooltip-format": "\n<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>\n",
+        "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%d-%m-%Y}"
     },
 
@@ -115,11 +123,12 @@
 	},
 
     "custom/name": {
-        "format": "󰀉   Shisones Markov"
+        "format": "󰀉   Shisones Markov",
+        "tooltip-format": "click to reveal tray"
     },
 
     "custom/media-logo": {
-        "format": " ",
+        "format": "󰫔 ",
         "tooltip": false
     },
 

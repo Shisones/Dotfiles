@@ -87,7 +87,7 @@ fastfetch -c ~/.config/fastfetch/config.jsonc
 echo ""
 
 # Hyprland-related
-alias config='nv ~/.config/'
+alias config='cd ~/.config/; nv'
 
 # Prompt 
 WHITE="\[\033[01;37m\]"

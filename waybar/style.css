@@ -1,9 +1,17 @@
 * {
     border: none;
-    font-family: Fira, Roboto, Arial, sans-serif;
+    font-family: Roboto, Arial, Fira, sans-serif;
     font-size: 12px;
     color: #C8D0E0;
-    border-radius: 20px;
+    border-radius: 15px;
+}
+
+tooltip * {
+    color: #C8D0E0;
+    text-shadow: none;
+    background: rgba(37, 40, 45, 0.75);
+    border-radius: 15px;
+    box-shadow: 0 0 2px #25282D;
 }
 
 window {
@@ -13,29 +21,38 @@ window {
 window#waybar {
     background: rgba(0, 0, 0, 0);
 }
-/*-----module groups----*/
-.modules-right {
-	background-color: #2E3238;
-    margin: 10px 10px 0 0;
-    border: 2px solid #5E81AC;
 
+/*-----module groups----*/
+
+.modules-right {
+	background-color: rgba(46, 50, 56, 0.925);
+    margin: 10px 10px 0 0;
+    padding: 0 0 0 0;
+    border: 2px solid #5E81AC;
+    box-shadow: 0 0 3px #25282D;
 }
 .modules-center {
-	background-color: #25282D;
+	background-color: rgba(37, 40, 45, 0.925);
     margin: 10px 0 0 0;
     border: 2px solid #5E81AC;
+    box-shadow: 0 0 3px #25282D;
 }
 .modules-left {
     margin: 10px 0 0 10px;
     padding: 0 3px 0 0;
-	background-color: #25282D;
+	background-color: rgba(37, 40, 45, 0.925);
     border: 2px solid #5E81AC;
+    box-shadow: 0 0 3px #25282D;
 }
 
 #systray {
-	background-color: #2E3238;
+	background-color: rgba(46, 50, 56, 0.925);
 }
 
+#sysinfo {
+    background-color: transparent;
+    margin: 0;
+}
 /*-----modules indv----*/
 #workspaces button {
     padding: 0 2px;
@@ -64,32 +81,39 @@ window#waybar {
 #custom-media-logo,
 
 #clock {
-    background-color: #2E3238;
+    background-color: rgba(46, 50, 56, 0.925);
     border-radius: 100px;
     margin: 0 0;
-    padding: 0 10px 0 10px;
+    padding: 0 8px;
 }
 
 #cpu {
-    background-color: #25282D;
+    background-color: transparent;
 }
 
 #memory {
-    background-color: #25282D;
+    background-color: transparent;
 }
 
-#idle_inhibitor {
-    padding: 0 10px;
+#pulseaudio {
+    background-color: transparent;
+    padding: 0px 6px;
 }
-#mode {
-    color: #cc3436;
-    font-weight: bold;
+
+#network {
+    background-color: transparent;
+    padding: 0px 6px;
 }
+
+#tray {
+    background-color: transparent;
+}
+
 #custom-power {
     background-color: #BF616A;
     color: #25282D;
     border-radius: 100px;
-    margin: 3px 3px;
+    margin: 3px 3px 3px 0px;
     padding: 1px 0px 1px 4px;
 }
 
@@ -99,12 +123,16 @@ window#waybar {
     padding: 0 6px 0 6px;
 }
 
+#custom-media {
+    background-color: transparent;
+    padding: 0px 6px;
+}
 #custom-media-logo {
     background-color: #A3BE8C;
     color: #25282D;
     border-radius: 100px;
-    margin: 3px 3px;
-    padding: 1px 1px 1px 4px;
+    margin: 3px 0px 3px 3px;
+    padding: 1px 0px 1px 4px;
 }
 
 @keyframes blink-update {
