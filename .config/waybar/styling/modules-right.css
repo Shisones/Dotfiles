@@ -1,0 +1,115 @@
+/* modules-right.css */
+
+.modules-right {
+    margin: 10px 10px 0 0;
+    padding: 0 0 0 0;
+    background-color: @module_bg;
+    border: 1px solid @module_border;
+    border-radius: 15px;
+}
+
+#systray {
+    background-color: transparent;
+    border-radius: 15px;
+}
+
+#tray {
+    background-color: transparent;
+    padding: 0 5px;
+}
+
+#sysinfo {
+    margin: 0 1px 0 0px;
+    background-color: transparent;
+}
+
+#cpu {
+    background-color: transparent;
+}
+
+#memory {
+    background-color: transparent;
+}
+
+#pulseaudio {
+    background-color: transparent;
+    padding: 0px 6px;
+}
+
+#pulseaudio:hover {
+    background-color: @hover_bg;
+    margin: 3px 0px;
+    border-radius: 15px;
+}
+
+#network {
+    background-color: transparent;
+    padding: 0px 6px;
+}
+
+#network:hover {
+    background-color: @hover_bg;
+    margin: 3px 0px;
+    border-radius: 15px;
+}
+
+#custom-power {
+    background-color: @hover_bg;
+    color: @power_color;
+    border-radius: 100px;
+    margin: 3px 3px 3px 0px;
+    padding: 1px 0px 1px 4px;
+}
+
+#custom-power:hover {
+    background-color: @power_color;
+    color: @hover_col;
+}
+
+#custom-media {
+    background-color: transparent;
+    padding: 0px 6px;
+    margin: 3px 0px 3px 2px;
+}
+
+#custom-media:hover {
+    background-color: @hover_bg;
+    border-radius: 15px;
+}
+
+#custom-media-logo {
+    background-color: @hover_bg;
+    color: @media_color;
+    border-radius: 100px;
+    margin: 3px 1px 3px 3px;
+    padding: 1px 0px 1px 4px;
+}
+
+#custom-media-logo:hover {
+    background-color: @media_color;
+    color: @hover_col;
+}
+
+@keyframes blink-update {
+    to {
+        color: @power_color;
+    }
+}
+
+#custom-pacman {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    padding: 0px 0px 0px 4px;
+    margin: 1px 0px;
+}
+
+#custom-pacman.pending-updates {
+    animation-name: blink-update;
+    animation-duration: 3s;
+    padding-right: 3px;
+}
+
+#custom-pacman.updated {
+    color: @media_color;
+}

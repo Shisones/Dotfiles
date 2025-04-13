@@ -1,0 +1,30 @@
+/* base.css */
+
+/* General Waybar Rules */
+* {
+    border: none;
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+    color: @text_color;
+    font-weight: bold;
+}
+
+tooltip {
+    color: @text_color;
+    background-color: @tooltip_bg;
+    border: 1px solid @tooltip_border;
+}
+
+tooltip * {
+    margin: 0;
+    border-radius: 0px;
+    background: none;
+}
+
+window {
+    font-weight: bold;
+}
+
+window#waybar {
+    background: transparent;
+}

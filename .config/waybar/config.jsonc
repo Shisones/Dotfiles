@@ -1,0 +1,206 @@
+{
+    "layer": "top",
+    "position": "top",
+    "spacing": 1,
+
+    "modules-left": [
+        "custom/distro",
+        "group/systray", 
+        "hyprland/workspaces", 
+        "custom/pacman"
+    ],
+    "modules-center": [
+        "clock",
+        "custom/notification"
+    ],
+    "modules-right": [
+        "group/mediaplayer", 
+        "group/sysinfo", 
+        "custom/power"
+    ],
+    
+    "group/systray": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "children-class": "tray-open",
+            "transition-left-to-right": true,
+            "click-to-reveal": true
+        },
+        "modules": [
+            "custom/name",
+            "tray"
+        ]
+    },
+
+    "group/sysinfo": {
+        "orientation": "inherit",
+        "modules": [
+            "pulseaudio",
+            "network",
+            "battery"
+        ]
+    },
+
+    "group/mediaplayer": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration":500,
+            "children-class": "tray-open",
+            "transition-left-to-right": true,
+            "click-to-reveal": true
+        },
+        "modules": [
+            "custom/media-logo",
+            "custom/media"
+        ]
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "default": "",
+            "active": "",
+            "special": ""
+        },
+        "show-special": true,
+        "persistent-workspaces": {
+            "*": 3
+        },
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1"
+    },
+
+    "tray": {
+         "icon-size": 16,
+         "spacing": 5
+    },
+
+    "network": {
+        "format-wifi": "   {essid} ({signalStrength}%) ",
+        "format-ethernet": "   Ethernet",
+        "format-disconnected": " ", 
+        "max-length": 50,
+        "tooltip-format": "󰩟   {ipaddr}\n   {bandwidthUpBits}\n   {bandwidthDownBits}",
+        "on-click": "nm-connection-editor"
+    },
+
+    "clock": {
+        "tooltip-format": "<big>{:%A, %d %B %Y}</big>",
+        "format-alt": "{:%A, %d %B %Y}",
+        "on-click-right": "korganizer"
+    },
+
+    "cpu": {
+        "format": "{usage}%  ",
+        "tooltip": false,
+        "on-click": "alacritty -e btop"
+    },
+
+    "memory": {
+        "format": "󰑭   {}%",
+        "tooltip": false,
+        "on-click": "alacritty -e btop"
+    },
+
+    "battery": {
+        "bat": "BAT2",
+        "interval": 60,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}   {capacity}% ",
+        "format-icons": ["", "", "", "", ""],
+        "max-length": 25
+    },
+
+    "pulseaudio": {
+        "format": "{icon}   {volume}%",
+        "format-bluetooth": "{icon}   {volume}% {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": "",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+	"custom/power": {
+		"format": " ",
+        "tooltip-format": "Shutdown",
+		"on-click": "wlogout"
+	},
+
+    "custom/distro": {
+        "format": " ",
+        "tooltip-format": "Application Launcher",
+        "on-click": "rofi -show drun"
+    },
+
+    "custom/name": {
+        "format": "Shisones Markov",
+        "tooltip-format": "Click to expand systray" 
+    },
+
+    "custom/media-logo": {
+        "format": "󰫔 ",
+        "tooltip-format": "Media Player" 
+    },
+
+    "custom/media": {
+        "format": "{}",
+        "tooltip-format": "Play/Pause",
+        "return-type": "json",
+        "max-length": 50,
+        "format-icons": {
+            "spotify": " ",
+            "default": "󰎆 ",
+            "firefox": " "
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null",
+        "on-click": "playerctl play-pause",
+        "on-click-right": ""
+    },
+    
+    "custom/pacman": {
+        "format": "{icon}{0}",
+        "return-type": "json",
+        "format-icons": {
+        "pending-updates": " ",
+        "updated": " "
+        },
+        "exec-if": "which waybar-updates",
+        "exec": "waybar-updates -f ' {total}'"
+    },
+
+    "custom/notification": {
+        "tooltip": false,
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "󱅫",
+            "none": "󰂚",
+            "dnd-notification": "󱏧",
+            "dnd-none": "󱏧",
+            "inhibited-notification": "󱏧",
+            "inhibited-none": "󱏧",
+            "dnd-inhibited-notification": "󱏧",
+            "dnd-inhibited-none": "󱏧"
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    }
+}

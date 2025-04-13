@@ -1,0 +1,34 @@
+/* modules-center.css */
+
+.modules-center {
+    margin: 10px 0 0 0;
+    background-color: @module_bg;
+    border: 1px solid @module_border;
+    border-radius: 15px;
+    padding: 0 2px;
+}
+
+#clock {
+    background-color: transparent;
+    border-radius: 100px;
+    padding: 0 8px;
+}
+
+#clock:hover {
+    background-color: @hover_bg;
+    margin: 3px 0px;
+    border-radius: 15px;
+}
+
+#custom-notification {
+    background-color: @hover_bg;
+    color: @notification_color;
+    border-radius: 100px;
+    margin: 3px 1px 3px 0px;
+    padding: 1px 6px 1px 5px;
+}
+
+#custom-notification:hover {
+    background-color: @notification_color;
+    color: @hover_col;
+}

@@ -1,0 +1,23 @@
+/* variables.css */
+
+@define-color text_color rgb(229, 233, 240);
+@define-color tooltip_bg rgba(37, 42, 52, 0.925);
+@define-color tooltip_border rgb(66, 73, 90);
+
+@define-color module_bga rgba(37, 42, 51, 0.925);
+@define-color module_bg rgba(46, 52, 64, 0.925);
+@define-color module_border rgba(46, 52, 64, 0.925);
+
+@define-color hover_bg rgba(76, 86, 106, 0.75);
+@define-color hover_col rgba(37, 42, 51, 0.925);
+
+@define-color focused_bg rgb(94, 129, 172);
+
+@define-color success_color rgb(45, 204, 54);
+@define-color error_color rgb(204, 52, 54);
+@define-color warning_color rgb(230, 230, 0);
+
+@define-color power_color rgb(191, 97, 106);
+@define-color media_color rgb(163, 190, 140);
+@define-color notification_color #EBCB8B;
+@define-color distro_color rgb(136, 192, 208);

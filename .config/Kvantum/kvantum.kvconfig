@@ -1,0 +1,5 @@
+[General]
+theme=GraphiteNord-rimlessDark
+
+[Applications]
+Default=*

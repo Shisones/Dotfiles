@@ -1,0 +1,8 @@
+/* style.css */
+
+@import url("styling/variables.css");
+@import url("styling/base.css");
+@import url("styling/indicators.css");
+@import url("styling/modules-left.css");
+@import url("styling/modules-center.css");
+@import url("styling/modules-right.css");

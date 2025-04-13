@@ -1,0 +1,6 @@
+@theme "/home/Shisones/.config/rofi/themes/Silvery-Onenord.rasi"
+
+configuration {
+    drun-display-format: "{icon} {name}";
+    show-icons: true;
+}

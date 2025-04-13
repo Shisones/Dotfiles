@@ -1,0 +1,25 @@
+/* indicators.css */
+
+#idle_inhibitor.activated {
+    color: @success_color;
+}
+
+#pulseaudio.muted {
+    color: @error_color;
+}
+
+#battery.charging {
+    color: @success_color;
+}
+
+#battery.warning:not(.charging) {
+    color: @warning_color;
+}
+
+#battery.critical:not(.charging) {
+    color: @error_color;
+}
+
+#temperature.critical {
+    color: @error_color;
+}

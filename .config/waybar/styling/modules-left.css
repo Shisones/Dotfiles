@@ -1,0 +1,48 @@
+/* modules-left.css */
+
+.modules-left {
+    margin: 10px 0 0 10px;
+    padding: 0 3px 0 0;
+    background-color: @module_bg;
+    border: 1px solid @module_border;
+    border-radius: 15px;
+}
+
+#workspaces button {
+    padding: 0 1px;
+    background: none;
+}
+
+#workspaces button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+}
+
+#workspaces button.focused {
+    background-color: @focused_bg;
+}
+
+#custom-distro {
+    background-color: @hover_bg;
+    color: @distro_color;
+    border-radius: 100px;
+    margin: 3px 0px 3px 3px;
+    padding: 1px 1px 1px 4px;
+}
+
+#custom-distro:hover {
+    background-color: @distro_color;
+    color: @hover_col;
+}
+
+#custom-name {
+    border-radius: 100px;
+    margin: 0;
+    padding: 0 6px 0 6px;
+}
+
+#custom-name:hover {
+    background-color: @hover_bg;
+    border-radius: 15px;
+    margin: 3px 0;
+}
