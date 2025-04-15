@@ -8,7 +8,7 @@ format = '[$localipv4](bold red)'
 disabled = false
 
 [username]
-style_user = "black bold"
+style_user = "bright-black"
 style_root = "red bold"
 format = "[$user]($style)"
 disabled = false

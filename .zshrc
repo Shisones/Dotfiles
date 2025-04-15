@@ -28,6 +28,9 @@ zinit light zsh-users/zsh-autosuggestions
 (( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[path]=none
 ZSH_HIGHLIGHT_STYLES[path_prefix]=none
+bindkey ';5~' kill-word
+bindkey '^H' backward-kill-word
+
 
 # Starship
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"

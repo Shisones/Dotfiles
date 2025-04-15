@@ -22,7 +22,7 @@
         foreground = "#E5E9F0"
 
     [colors.normal]
-        black = "#C0C0C0"
+        black = "#4C566A"
         red = "#BF616A"
         green = "#A3BE8C"
         yellow = "#EBCB8B"
@@ -32,7 +32,7 @@
         white = "#E5E9F0"
 
     [colors.bright]
-        black = "#4C566A"
+        black = "#C0C0C0"
         red = "#BF616A"
         green = "#A3BE8C"
         yellow = "#EBCB8B"
