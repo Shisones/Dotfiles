@@ -1,5 +1,5 @@
 format = """
-\\[$username@$hostname\\] on $time \\[$directory\\]
+[ $username@$hostname ](bg:#42495A)[](fg:#42495A bg:#363E4B)[$time$directory$python ](bg:#363E4B)[](fg:#363E4B)
  $character
 """
 [localip]
@@ -8,7 +8,7 @@ format = '[$localipv4](bold red)'
 disabled = false
 
 [username]
-style_user = "bright-black"
+style_user = "fg:#c0c0c0 bg:#42495A"
 style_root = "red bold"
 format = "[$user]($style)"
 disabled = false
@@ -16,7 +16,8 @@ show_always = true
 
 [hostname]
 ssh_only = false
-format = '[$hostname](bold cyan)'
+format = '[$hostname]($style)'
+style = "fg:cyan bold bg:#42495A"
 trim_at = "."
 disabled = false
 
@@ -25,19 +26,23 @@ success_symbol = "[󰁕](bold white)"
 error_symbol = "[󰁕](bold white)"
 
 [time]
-disabled = false
-style = "green bold"
-format = "[$time]($style)"
+disabled = true
+style = "fg:green bold bg:#363E4B"
+format = " [$time]($style)"
 
 [directory]
-format = "[$read_only](bold red)[$path]($style)"
+format = " \\[[$read_only](bold red)[$path]($style)\\]"
 read_only = "󰌾 "
 truncation_length = 3
 truncate_to_repo = true
-style = "bold white"
+style = "fg:bold white bg:#363E4B"
 
 [cmd_duration]
 min_time = 4
 show_milliseconds = false
 disabled = true
 style = "bold italic red"
+
+[python]
+symbol = " "
+format = "[${symbol}(\\($virtualenv\\))]($style)"

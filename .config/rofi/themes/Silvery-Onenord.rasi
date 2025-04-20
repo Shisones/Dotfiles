@@ -1,12 +1,12 @@
 
 * {
-    bg0:    #25282D;
-    bg1:    #2E3238F2;
-    bg2:    #3B425280;
+    bg0:    #252A33;
+    bg1:    #2E3440F0;
+    bg2:    #363E4BF0;
     bg3:    #5E81ACF2;
-    fg0:    #D8DEE9;
-    fg1:    #ECEFF4;
-    fg2:    #D8DEE9;
+    fg0:    #B9C1D0;
+    fg1:    #E5E9F0;
+    fg2:    #C8D0E0;
     fg3:    #4C566A;
 }
 

@@ -21,6 +21,12 @@ return {
   },
 
   {
+    'stevearc/dressing.nvim',
+    opts = {},
+    event='VeryLazy'
+  },
+
+  {
     "hrsh7th/nvim-cmp",
     event = "InsertEnter",
     dependencies = {
@@ -70,5 +76,7 @@ return {
   {
     "nvzone/showkeys",
     cmd = "ShowkeysToggle",
-  }
+  },
+
+
 }
