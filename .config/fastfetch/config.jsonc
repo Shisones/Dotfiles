@@ -12,36 +12,36 @@
     "modules": [
         {
             "type": "custom",
-            "format": "\u001b[1m\u001b[90m╭─────────────────────────────────────╮"
+            "format": "\u001b[1m\u001b[90m╭───────────────────────────────────────╮"
         },
         {
             "type": "os",
             "key": "\u001b[90m│\u001b[34m  OS   :",
-            "format": "{3}\u001b[1m\u001b[90m                 │"
+            "format": "{3}\u001b[1m\u001b[90m                   │"
         },
         {
             "type": "host",
             "key": "\u001b[90m│\u001b[34m 󰌢 Host :",
-            "format": "{1}\u001b[1m\u001b[90m              │"
+            "format": "{1}\u001b[1m\u001b[90m          │"
         },
         {
             "type": "cpu",
             "key": "\u001b[90m│\u001b[34m  CPU  :",
-            "format": "Intel(R) Core(TM) i3-12100\u001b[1m\u001b[90m │"
+            "format": "Intel Core i5-1235U\u001b[1m\u001b[90m          │"
         },
         {
             "type": "gpu",
             "key": "\u001b[90m│\u001b[34m 󰹑 GPU  :",
-            "format": "NVIDIA GeForce GTX 1650S\u001b[1m\u001b[90m   │"
+            "format": "{1} {2} {3}\u001b[1m\u001b[90m  │"
         },
         {
             "type": "memory",
             "key": "\u001b[90m│\u001b[34m 󰑭 RAM  :",
-            "format": "{1} / {2}\u001b[1m\u001b[90m       │"
+            "format": "{1} / {2}\u001b[1m\u001b[90m         │"
         },
         {
             "type": "custom",
-            "format": "\u001b[1m\u001b[90m╰─────────────────────────────────────╯"
+            "format": "\u001b[1m\u001b[90m╰───────────────────────────────────────╯"
         }
     ]
 }

@@ -31,6 +31,39 @@
     background-color: transparent;
 }
 
+#bluetooth {
+    background-color: transparent;
+    padding: 0px 6px;
+}
+
+#bluetooth:hover {
+    background-color: @hover_bg;
+    margin: 3px 0px;
+    border-radius: 15px;
+}
+
+#backlight {
+    background-color: transparent;
+    padding: 0px 6px;
+}
+
+#backlight:hover {
+    background-color: @hover_bg;
+    margin: 3px 0px;
+    border-radius: 15px;
+}
+
+#battery {
+    background-color: transparent;
+    padding: 0px 6px;
+}
+
+#battery:hover {
+    background-color: @hover_bg;
+    margin: 3px 0px;
+    border-radius: 15px;
+}
+
 #pulseaudio {
     background-color: transparent;
     padding: 0px 6px;

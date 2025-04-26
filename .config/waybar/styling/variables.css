@@ -13,9 +13,9 @@
 
 @define-color focused_bg rgb(94, 129, 172);
 
-@define-color success_color rgb(45, 204, 54);
-@define-color error_color rgb(204, 52, 54);
-@define-color warning_color rgb(230, 230, 0);
+@define-color success_color rgb(163, 190, 140);
+@define-color error_color rgb(191, 97, 106);
+@define-color warning_color #EBCB8B;
 
 @define-color power_color rgb(191, 97, 106);
 @define-color media_color rgb(163, 190, 140);
