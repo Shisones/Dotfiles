@@ -32,12 +32,12 @@ button {
 	background-repeat: no-repeat;
     	background-position: center;
     	background-size: 20%;
-    	background-color: rgba(20, 20, 20, 0.8);
+    	background-color: rgba(46, 52, 64, 0.8);
     	animation: gradient_f 20s ease-in infinite;
     	border-radius: 20px;
 	border: 2px;
     border-style: solid;
-    border-color: rgba(20, 20, 20, 0.8);
+    border-color: rgba(46, 52, 64, 0.8);
 	transition: all 0.3s cubic-bezier(.55, 0.0, .28, 1.682), box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
     box-shadow: 0 0 5px #252A33; 
 }

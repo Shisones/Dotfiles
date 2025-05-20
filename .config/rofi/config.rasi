@@ -3,4 +3,8 @@
 configuration {
     drun-display-format: "{icon} {name}";
     show-icons: true;
+    me-select-entry: "";
+    me-accept-entry: "MousePrimary";
+    hover-select: true;
+    click-to-exit: true;
 }

@@ -1,0 +1,14 @@
+@define-color polar-night-1 rgba(46, 52, 64, 0.95); /* Darkest background */
+@define-color polar-night-2 #363e4b; /* Notification background */
+@define-color polar-night-3 #3b4252; /* Widget backgrounds */
+@define-color polar-night-4 #434c5e; /* Hover states, sliders */
+@define-color polar-night-5 #4c566a; /* Borders, buttons */
+@define-color snow-storm-1 #a2a9b7; /* Notification body text */
+@define-color snow-storm-2 #b9c1d0; /* Notification time text */
+@define-color snow-storm-3 #c8d0e0; /* Main text, labels */
+@define-color frost-1 #81a1c1; /* Volume, normal/low progress */
+@define-color aurora-red #bf616a; /* Critical notifications, close button */
+@define-color aurora-pink #ea999c; /* Close button default */
+@define-color aurora-yellow #ebcb8b; /* Backlight */
+@define-color shadow rgba(0, 0, 0, 0.5); /* Box shadow */
+@define-color white #ffffff; /* MPRIS text */

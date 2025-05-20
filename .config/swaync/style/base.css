@@ -1,0 +1,23 @@
+* {
+    all: unset;
+    font-size: 12px;
+    font-family: "Inter";
+    font-weight: bold;
+    transition: 100ms;
+    opacity: 1;
+}
+
+trough highlight {
+    background: @snow-storm-3;
+}
+
+scale trough {
+    margin: 0rem 1rem;
+    background-color: @polar-night-1;
+    min-height: 8px;
+    min-width: 70px;
+}
+
+slider {
+    background-color: @frost-1;
+}

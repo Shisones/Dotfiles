@@ -22,8 +22,8 @@ trim_at = "."
 disabled = false
 
 [character]
-success_symbol = "[󰁕](bold white)"
-error_symbol = "[󰁕](bold white)"
+success_symbol = "[󰁕](white)"
+error_symbol = "[󰁕](white)"
 
 [time]
 disabled = true

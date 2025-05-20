@@ -16,13 +16,13 @@
   "notification-icon-size": 24,
   "notification-body-image-height": 100,
   "notification-body-image-width": 100,
-  "timeout": 5,
-  "timeout-low": 3,
+  "timeout": 3,
+  "timeout-low": 1,
   "timeout-critical": 0,
   "fit-to-screen": false,
   "relative-timestamps": true,
   "control-center-width": 600,
-  "control-center-height": 100,
+  "control-center-height": 750,
   "notification-window-width": 350,
   "keyboard-shortcuts": true,
   "image-visibility": "when-available",
@@ -50,8 +50,8 @@
     }
   },
   "widgets": [
-    "title",
     "mpris",
+    "title",
     "notifications"
   ],
   "widget-config": {
@@ -73,28 +73,41 @@
       "text": "Label Text"
     },
     "mpris": {
-      "image-size": 96,
-      "image-radius": 12,
+      "image-size": 75,
+      "image-radius": 8,
       "blacklist": []
     },
     "buttons-grid": {
       "actions": [
         {
-          "label": "直",
+          "label": "WiFi",
           "type": "toggle",
           "active": true,
-          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && nmcli radio wifi on || nmcli radio wifi off'",
-          "update-command": "sh -c '[[ $(nmcli radio wifi) == \"enabled\" ]] && echo true || echo false'"
+          "command": "nmcli radio wifi toggle",
+          "update-command": "nmcli radio wifi | grep -q enabled && notify-send 'WiFi Status' 'WiFi is enabled' || notify-send 'WiFi Status' 'WiFi is disabled'"
+        },
+        {
+          "label": "BT",
+          "type": "toggle",
+          "active": true,
+          "command": "rfkill toggle bluetooth",
+          "update-command": "rfkill list bluetooth | grep -q 'Soft blocked: no' && notify-send 'Bluetooth Status' 'Bluetooth is enabled' || notify-send 'Bluetooth Status' 'Bluetooth is disabled'"
+        },
+        {
+          "label": "DND",
+          "type": "toggle",
+          "active": false,
+          "command": "swaync-client -dn",
+          "update-command": "swaync-client -q | grep -q 'true' && notify-send 'DND Status' 'Do Not Disturb is on' || notify-send 'DND Status' 'Do Not Disturb is off'"
         }
       ]
     },
     "rules": [
-        {
-            "app_id": "firefox",
-            "display_in_tray": true,
-            "display_in_notification_area": true
-        }
+      {
+        "app_id": "firefox",
+        "display_in_tray": true,
+        "display_in_notification_area": true
+      }
     ]
-
   }
 }
