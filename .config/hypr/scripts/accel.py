@@ -18,7 +18,7 @@ import sys
 device_dpi = 800 # mouse dpi
 screen_dpi = 91.75
 screen_scaling_factor = 1
-sample_point_count = 20 # should be enough but you can try to increase for accuracy of windows function
+sample_point_count = 500 # should be enough but you can try to increase for accuracy of windows function
 sensitivity_factor = 6
 # sensitivity factor translation table: (windows slider notches)
 # 1 = 0.1

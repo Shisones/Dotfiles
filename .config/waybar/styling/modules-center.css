@@ -5,18 +5,19 @@
     background-color: @module_bg;
     border: 1px solid @module_border;
     border-radius: 15px;
-    padding: 0 2px;
+    padding: 0 0px;
 }
 
 #clock {
     background-color: transparent;
     border-radius: 100px;
     padding: 0 8px;
+    margin: 0 0 0 2px;
 }
 
 #clock:hover {
     background-color: @hover_bg;
-    margin: 3px 0px;
+    margin: 3px 0px 3px 2px;
     border-radius: 15px;
 }
 
@@ -24,8 +25,8 @@
     background-color: @hover_bg;
     color: @notification_color;
     border-radius: 100px;
-    margin: 3px 1px 3px 0px;
-    padding: 1px 6px 1px 5px;
+    margin: 3px 3px 3px 0px;
+    padding: 1px 4px 1px 4px;
 }
 
 #custom-notification:hover {

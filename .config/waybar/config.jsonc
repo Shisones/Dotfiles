@@ -78,11 +78,11 @@
     },
 
     "network": {
-        "format-wifi": "   {essid}",
-        "format-ethernet": "   Ethernet",
+        "format-wifi": "  {essid}",
+        "format-ethernet": "  Ethernet",
         "format-disconnected": " ", 
         "max-length": 50,
-        "tooltip-format": "󰩟   {ipaddr}\n   {bandwidthUpBits}\n   {bandwidthDownBits}",
+        "tooltip-format": "󰩟  {ipaddr}\n  {bandwidthUpBits}\n  {bandwidthDownBits}",
         "on-click": "nm-connection-editor"
     },
 
@@ -99,14 +99,14 @@
     },
 
     "memory": {
-        "format": "󰑭   {}%",
+        "format": "󰑭  {}%",
         "tooltip": false,
         "on-click": "alacritty -e btop"
     },
 
     "backlight": {
         "device": "intel_backlight",
-        "format": "{icon}   {percent}%",
+        "format": "{icon}  {percent}%",
         "format-icons": ["", ""]
     },
 
@@ -123,22 +123,22 @@
     },
 
     "bluetooth": {
-        "format": "   {status}",
-        "format-connected": "   {device_alias}",
-        "format-connected-battery": "   {device_alias} {device_battery_percentage}%",
-        "tooltip-format": "󰾰   {controller_alias}\t{controller_address}\n\n{num_connections} connected",
-        "tooltip-format-connected": "󰾰   {controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-        "tooltip-format-enumerate-connected": "󰾰   {device_alias}\t{device_address}",
-        "tooltip-format-enumerate-connected-battery": "󰾰   {device_alias}\t{device_address}\t{device_battery_percentage}%"
+        "format": "  {status}",
+        "format-connected": "  {device_alias}",
+        "format-connected-battery": "  {device_alias} {device_battery_percentage}%",
+        "tooltip-format": "󰾰  {controller_alias}\t{controller_address}\n\n{num_connections} connected",
+        "tooltip-format-connected": "󰾰  {controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "󰾰  {device_alias}\t{device_address}",
+        "tooltip-format-enumerate-connected-battery": "󰾰  {device_alias}\t{device_address}\t{device_battery_percentage}%"
     },
 
     "pulseaudio": {
-        "format": "{icon}   {volume}%",
-        "format-bluetooth": "{icon}   {volume}%    {format_source}",
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": "{icon}  {volume}% ({format_source})",
         "format-bluetooth-muted": "{icon}  {format_source}",
-        "format-muted": " {volume}%",
-        "format-source": " {volume}%",
-        "format-source-muted": " ",
+        "format-muted": "  {volume}%",
+        "format-source": "  {volume}%",
+        "format-source-muted": "",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -152,13 +152,13 @@
     },
 
 	"custom/power": {
-		"format": " ",
+		"format": "",
         "tooltip-format": "Shutdown",
 		"on-click": "wlogout"
 	},
 
     "custom/distro": {
-        "format": " ",
+        "format": "󰣇",
         "tooltip-format": "Application Launcher",
         "on-click": "rofi -show drun"
     },
@@ -169,7 +169,7 @@
     },
 
     "custom/media-logo": {
-        "format": "󰫔 ",
+        "format": "󰫔",
         "tooltip-format": "Media Player" 
     },
 
@@ -190,11 +190,11 @@
     },
     
     "custom/pacman": {
-        "format": "{icon}{0}",
+        "format": "{icon} {0}",
         "return-type": "json",
         "format-icons": {
-        "pending-updates": " ",
-        "updated": " "
+        "pending-updates": "",
+        "updated": ""
         },
         "exec-if": "which waybar-updates",
         "exec": "waybar-updates -f ' {total}'"

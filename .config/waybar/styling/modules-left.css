@@ -2,7 +2,7 @@
 
 .modules-left {
     margin: 10px 0 0 10px;
-    padding: 0 3px 0 0;
+    padding: 0 0 0 0;
     background-color: @module_bg;
     border: 1px solid @module_border;
     border-radius: 15px;
@@ -27,7 +27,7 @@
     color: @distro_color;
     border-radius: 100px;
     margin: 3px 0px 3px 3px;
-    padding: 1px 1px 1px 4px;
+    padding: 1px 4px 1px 4px;
 }
 
 #custom-distro:hover {
@@ -47,4 +47,26 @@
     margin: 3px 0;
 }
 
+@keyframes blink-update {
+    to {
+        color: @power_color;
+    }
+}
 
+#custom-pacman {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    padding: 0px 0px 0px 3px;
+    margin: 1px 0px;
+}
+
+#custom-pacman.pending-updates {
+    animation-name: blink-update;
+    animation-duration: 3s;
+    padding-right: 3px;
+}
+
+#custom-pacman.updated {
+    color: @media_color;
+}

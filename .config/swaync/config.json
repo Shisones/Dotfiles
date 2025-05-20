@@ -51,6 +51,7 @@
   },
   "widgets": [
     "title",
+    "mpris",
     "notifications"
   ],
   "widget-config": {

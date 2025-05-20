@@ -91,7 +91,7 @@
     color: @power_color;
     border-radius: 100px;
     margin: 3px 3px 3px 0px;
-    padding: 1px 0px 1px 4px;
+    padding: 1px 4px 1px 4px;
 }
 
 #custom-power:hover {
@@ -115,7 +115,7 @@
     color: @media_color;
     border-radius: 100px;
     margin: 3px 1px 3px 3px;
-    padding: 1px 0px 1px 4px;
+    padding: 1px 4px 1px 4px;
 }
 
 #custom-media-logo:hover {
@@ -123,26 +123,4 @@
     color: @hover_col;
 }
 
-@keyframes blink-update {
-    to {
-        color: @power_color;
-    }
-}
 
-#custom-pacman {
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    padding: 0px 0px 0px 4px;
-    margin: 1px 0px;
-}
-
-#custom-pacman.pending-updates {
-    animation-name: blink-update;
-    animation-duration: 3s;
-    padding-right: 3px;
-}
-
-#custom-pacman.updated {
-    color: @media_color;
-}
