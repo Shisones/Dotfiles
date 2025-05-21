@@ -5,12 +5,12 @@
     padding: 0 0 0 0;
     background-color: @module_bg;
     border: 1px solid @module_border;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 #systray {
     background-color: transparent;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 #tray {
@@ -39,7 +39,7 @@
 #bluetooth:hover {
     background-color: @hover_bg;
     margin: 3px 0px;
-    border-radius: 15px;
+    border-radius: 7px;
 }
 
 #backlight {
@@ -50,7 +50,7 @@
 #backlight:hover {
     background-color: @hover_bg;
     margin: 3px 0px;
-    border-radius: 15px;
+    border-radius: 7px;
 }
 
 #battery {
@@ -61,7 +61,7 @@
 #battery:hover {
     background-color: @hover_bg;
     margin: 3px 0px;
-    border-radius: 15px;
+    border-radius: 7px;
 }
 
 #pulseaudio {
@@ -72,7 +72,7 @@
 #pulseaudio:hover {
     background-color: @hover_bg;
     margin: 3px 0px;
-    border-radius: 15px;
+    border-radius: 7px;
 }
 
 #network {
@@ -83,13 +83,13 @@
 #network:hover {
     background-color: @hover_bg;
     margin: 3px 0px;
-    border-radius: 15px;
+    border-radius: 7px;
 }
 
 #custom-power {
     background-color: @hover_bg;
     color: @power_color;
-    border-radius: 100px;
+    border-radius: 7px;
     margin: 3px 3px 3px 0px;
     padding: 1px 4px 1px 4px;
 }
@@ -107,13 +107,13 @@
 
 #custom-media:hover {
     background-color: @hover_bg;
-    border-radius: 15px;
+    border-radius: 7px;
 }
 
 #custom-media-logo {
     background-color: @hover_bg;
     color: @media_color;
-    border-radius: 100px;
+    border-radius: 7px;
     margin: 3px 1px 3px 3px;
     padding: 1px 4px 1px 4px;
 }

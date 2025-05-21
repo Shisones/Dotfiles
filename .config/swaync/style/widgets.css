@@ -1,10 +1,12 @@
 .notification.critical progress {
   background-color: @aurora-red;
+  border-radius: 5px;
 }
 
 .notification.low progress,
 .notification.normal progress {
   background-color: @frost-1;
+  border-radius: 5px;
 }
 
 .control-center-dnd {

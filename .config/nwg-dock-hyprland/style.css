@@ -1,10 +1,10 @@
 window {
-    background: #2E3440;
+    background: rgba(46, 52, 64, 0.85);
     border-radius: 10px;
 	border-style: solid;
-	border-width: 2px;
-	border-color: transparent;
-    box-shadow: 0 0 5px #252A33;
+	border-width: 1px;
+	border-color: rgba(76, 86, 106, 0.85);
+    box-shadow: 0 0 0px #252A33;
 }
 
 #box {
@@ -15,7 +15,7 @@ window {
 #active {
 	/* This is to underline the button representing the currently active window */
 	border-bottom: none;
-	border-color: rgba(255, 255, 255, 0.5);
+	border-color: rgba(76, 86, 106, 0.85);
     border-width: 2px
 }
 
@@ -23,7 +23,7 @@ button, image {
 	background: none;
 	border-style: solid;
 	box-shadow: none;
-	color: #808080
+	color: rgba(76, 86, 106, 0.85);
 }
 
 button {
@@ -34,11 +34,11 @@ button {
 }
 
 button:hover {
-	background-color: rgba(255, 255, 255, 0.1);
-	border-radius: 6px;
+	background-color: rgba(76, 86, 106, 0.5);
+	border-radius: 230px;
 }
 
 button:focus {
 	box-shadow: none;
-    border: solid 2px red
+    border: solid 0px red
 }

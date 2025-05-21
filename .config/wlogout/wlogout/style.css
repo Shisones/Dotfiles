@@ -15,7 +15,7 @@ by Stephan Raabe (2023)
  * ----------------------------------------------------- */
 
 * {
-    font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-family: "Inter", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
 	background-image: none;
 	transition: 20ms;
 	box-shadow: none;
@@ -38,8 +38,8 @@ button {
 	border: 2px;
     border-style: solid;
     border-color: rgba(20, 20, 20, 0.8);
-	transition: all 0.3s cubic-bezier(.55, 0.0, .28, 1.682), box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
-    box-shadow: 0 0 5px #25282D; 
+	transition: all 0.1s cubic-bezier(.55, 0.0, .28, 1.682), box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    box-shadow: 0 0 5px #2E3440; 
 }
 
 /*button:focus {*/
@@ -48,7 +48,7 @@ button {
 /*}*/
 
 button:hover {
-    background-color: #25282D; 
+    background-color: #2E3440; 
 	opacity: 0.8;
     color: #C8D0E0;
     background-size: 30%;
@@ -57,7 +57,7 @@ button:hover {
     border-style: solid;
     border-color: #5E81AC;
     border-radius: 10px; 
-    box-shadow: 0 0 10px #25282D; 
+    box-shadow: 0 0 10px #2E3440; 
 }
 
 /* Adjust the size of the icon or content inside the button */

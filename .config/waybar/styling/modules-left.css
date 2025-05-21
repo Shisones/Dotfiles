@@ -5,7 +5,7 @@
     padding: 0 0 0 0;
     background-color: @module_bg;
     border: 1px solid @module_border;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 #workspaces button {
@@ -25,7 +25,7 @@
 #custom-distro {
     background-color: @hover_bg;
     color: @distro_color;
-    border-radius: 100px;
+    border-radius: 7px;
     margin: 3px 0px 3px 3px;
     padding: 1px 4px 1px 4px;
 }
@@ -36,15 +36,15 @@
 }
 
 #custom-name {
-    border-radius: 100px;
-    margin: 0;
+    border-radius: 7px;
+    margin: 3px 1px;
     padding: 0 6px 0 6px;
 }
 
 #custom-name:hover {
     background-color: @hover_bg;
-    border-radius: 15px;
-    margin: 3px 0;
+    border-radius: 7px;
+    margin: 3px 1px;
 }
 
 @keyframes blink-update {

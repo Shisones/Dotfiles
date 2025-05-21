@@ -1,6 +1,6 @@
 [window]
     decorations= "Full"
-    opacity = 0.95
+    opacity = 0.85
     blur = false 
     dynamic_padding = true
 
