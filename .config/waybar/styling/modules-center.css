@@ -6,19 +6,59 @@
     border: 1px solid @module_border;
     border-radius: 10px;
     padding: 0 0px;
+    box-shadow: 0 0 2px 0 @shadow;
     
+}
+
+#power-profiles-daemon.power-saver {
+    background-color: @hover_bg;
+    color: @media_color;
+    border-radius: 7px;
+    margin: 3px 1px 3px 3px;
+    padding: 1px 5px 1px 5px;
+}
+
+#power-profiles-daemon.power-saver:hover {
+    background-color: @media_color;
+    color: @hover_col;
+}
+
+#power-profiles-daemon.performance {
+    background-color: @hover_bg;
+    color: @power_color;
+    border-radius: 7px;
+    margin: 3px 1px 3px 3px;
+    padding: 1px 5px 1px 5px;
+}
+
+#power-profiles-daemon.performance:hover {
+    background-color: @power_color;
+    color: @hover_col;
+}
+
+#power-profiles-daemon {
+    background-color: @hover_bg;
+    color: @notification_color;
+    border-radius: 7px;
+    margin: 3px 1px 3px 3px;
+    padding: 1px 5px 1px 5px;
+}
+
+#power-profiles-daemon:hover {
+    background-color: @notification_color;
+    color: @hover_col;
 }
 
 #clock {
     background-color: transparent;
     border-radius: 7px;
     padding: 0 6px;
-    margin: 0 0 0 3px;
+    margin: 0;
 }
 
 #clock:hover {
     background-color: @hover_bg;
-    margin: 3px 0px 3px 3px;
+    margin: 3px 0px 3px 0px;
     border-radius: 7px;
 }
 

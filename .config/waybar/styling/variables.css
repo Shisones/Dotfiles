@@ -21,3 +21,5 @@
 @define-color media_color rgb(163, 190, 140);
 @define-color notification_color #EBCB8B;
 @define-color distro_color rgb(136, 192, 208);
+
+@define-color shadow rgba(0, 0, 0, 0.5); /* Box shadow */

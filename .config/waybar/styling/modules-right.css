@@ -6,6 +6,7 @@
     background-color: @module_bg;
     border: 1px solid @module_border;
     border-radius: 10px;
+    box-shadow: 0 0 2px 0 @shadow;
 }
 
 #systray {

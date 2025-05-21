@@ -45,34 +45,34 @@ case "$1" in
     "mute")
         wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
         STATUS=$(get_mute_status)
-        notify-send -e -r 1001 -t 1000 -i audio-volume-muted "Volume" "$STATUS"
+        notify-send -e -r 1000 -t 1000 -i audio-volume-muted -h string:synchronous:volume "Volume" "$STATUS"
         ;;
     "mic_mute")
         wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
         STATUS=$(get_mic_mute_status)
-        notify-send -e -r 1002 -t 1000 -i microphone-sensitivity-muted "Microphone" "$STATUS"
+        notify-send -e -r 1000 -t 1000 -i microphone-sensitivity-muted -h string:synchronous:volume "Microphone" "$STATUS"
         ;;
     "brightness_up")
         brightnessctl s 5%+
         BRIGHTNESS=$(get_brightness)
-        notify-send -e -r 1003 -t 1000 -i display-brightness-symbolic -h string:synchronous:brightness -h int:value:"$BRIGHTNESS" "Brightness" "$BRIGHTNESS%"
+        notify-send -e -r 1000 -t 1000 -i display-brightness-symbolic -h string:synchronous:brightness -h int:value:"$BRIGHTNESS" "Brightness" "$BRIGHTNESS%"
         ;;
     "brightness_down")
         brightnessctl s 5%-
         BRIGHTNESS=$(get_brightness)
-        notify-send -e -r 1003 -t 1000 -i display-brightness-symbolic -h string:synchronous:brightness -h int:value:"$BRIGHTNESS" "Brightness" "$BRIGHTNESS%"
+        notify-send -e -r 1000 -t 1000 -i display-brightness-symbolic -h string:synchronous:brightness -h int:value:"$BRIGHTNESS" "Brightness" "$BRIGHTNESS%"
         ;;
     "media_next")
         playerctl next
-        notify-send -e -r 1004 -t 1000 -i media-skip-forward "Media" "Next Track"
+        notify-send -e -r 1000 -t 1000 -i media-skip-forward -h string:synchronous:playerctl "Media" "Next Track"
         ;;
     "media_play_pause")
         playerctl play-pause
         STATUS=$(playerctl status 2>/dev/null && echo "Play/Pause" || echo "Play/Pause")
-        notify-send -e -r 1004 -t 1000 -i media-playback-start "Media" "$STATUS"
+        notify-send -e -r 1000 -t 1000 -i media-playback-start -h string:synchronous:playerctl "Media" "$STATUS"
         ;;
     "media_prev")
         playerctl previous
-        notify-send -e -r 1004 -t 1000 -i media-skip-backward "Media" "Previous Track"
+        notify-send -e -r 1000 -t 1000 -i media-skip-backward -h string:synchronous:playerctl "Media" "Previous Track"
         ;;
 esac

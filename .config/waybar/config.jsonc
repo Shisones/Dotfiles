@@ -10,6 +10,7 @@
         "custom/pacman"
     ],
     "modules-center": [
+        "power-profiles-daemon",
         "clock",
         "custom/notification"
     ],
@@ -164,7 +165,17 @@
         },
         "on-click": "pavucontrol"
     },
-
+    "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "󰠠  Power profile: {profile}\n󰠳  Driver: {driver}",
+      "tooltip": true,
+      "format-icons": {
+        "default": "󰓅",
+        "performance": "󰓅",
+        "balanced": "󰾅",
+        "power-saver": "󰾆"
+      }
+    },
 	"custom/power": {
 		"format": "",
         "tooltip-format": "Shutdown",
@@ -232,6 +243,8 @@
         "exec": "swaync-client -swb",
         "on-click": "swaync-client -t -sw",
         "on-click-right": "swaync-client -d -sw",
-        "escape": true
+        "escape": true,
+        "tooltip": true,
+        "tooltip-format": "SwayNC Notification Center"
     }
 }
