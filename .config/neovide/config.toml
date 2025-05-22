@@ -1,0 +1,7 @@
+[font]
+normal = ["SauceCodePro Nerd Font Propo"]
+size = 10
+
+[box-drawing]
+# "font-glyph", "native" or "selected-native"
+mode = "selected-native"

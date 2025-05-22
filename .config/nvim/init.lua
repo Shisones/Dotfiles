@@ -39,7 +39,7 @@ end)
 -- Neovide specific
 if vim.g.neovide then
   vim.o.guifont = "SauceCodePro Nerd Font:h10:b"
-  vim.g.neovide_opacity = 0.95
+  vim.g.neovide_opacity = 0.90
   vim.g.neovide_padding_top = 5
   vim.g.neovide_padding_bottom = 5
   vim.g.neovide_padding_right = 5
@@ -50,7 +50,7 @@ if vim.g.neovide then
   vim.g.neovide_remember_window_size = true
   vim.g.neovide_cursor_antialiasing = false
   vim.g.neovide_text_gamma = 0.8
-  vim.g.neovide_text_contrast = 0.2
+  vim.g.neovide_text_contrast = 0.1
 
   vim.api.nvim_set_keymap('v', '<sc-c>', '"+y', {noremap = true})
   vim.api.nvim_set_keymap("v", "<sc-c>", '"+y', { noremap = true }) -- Select line(s) in visual mode and copy (CTRL+Shift+V)
