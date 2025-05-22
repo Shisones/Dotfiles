@@ -75,7 +75,7 @@
     "mpris": {
       "image-size": 75,
       "image-radius": 8,
-      "blacklist": []
+      "blacklist": ["firefox"]
     },
     "buttons-grid": {
       "actions": [

@@ -36,6 +36,7 @@
     "group/sysinfo": {
         "orientation": "inherit",
         "modules": [
+            "backlight",
             "bluetooth",
             "pulseaudio",
             "network",
@@ -150,9 +151,9 @@
     "pulseaudio": {
         "format": "{icon}  {volume}%",
         "format-bluetooth": "{icon}  {volume}% ({format_source})",
-        "format-bluetooth-muted": "{icon}  {format_source}",
+        "format-bluetooth-muted": "{icon}  0% ({format_source})",
         "format-muted": "  {volume}%",
-        "format-source": "  {volume}%",
+        "format-source": "",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",

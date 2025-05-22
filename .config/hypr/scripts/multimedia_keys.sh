@@ -62,6 +62,17 @@ case "$1" in
         BRIGHTNESS=$(get_brightness)
         notify-send -e -r 1000 -t 1000 -i display-brightness-symbolic -h string:synchronous:brightness -h int:value:"$BRIGHTNESS" "Brightness" "$BRIGHTNESS%"
         ;;
+    "brightness_up_fine")
+        brightnessctl s 1%+
+        BRIGHTNESS=$(get_brightness)
+        notify-send -e -r 1000 -t 1000 -i display-brightness-symbolic -h string:synchronous:brightness -h int:value:"$BRIGHTNESS" "Brightness" "$BRIGHTNESS%"
+        ;;
+    "brightness_down_fine")
+        brightnessctl s 1%-
+        BRIGHTNESS=$(get_brightness)
+        notify-send -e -r 1000 -t 1000 -i display-brightness-symbolic -h string:synchronous:brightness -h int:value:"$BRIGHTNESS" "Brightness" "$BRIGHTNESS%"
+        ;;
+
     "media_next")
         playerctl next
         notify-send -e -r 1000 -t 1000 -i media-skip-forward -h string:synchronous:playerctl "Media" "Next Track"
