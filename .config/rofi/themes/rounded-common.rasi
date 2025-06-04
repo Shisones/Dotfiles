@@ -16,7 +16,7 @@ window {
     y-offset: calc(50% - 176px);
     width: 480;
     border-radius: 10px;
-    border: 2px;
+    border: 1px;
     border-color: @bg3;
     background-color: @bg1;
 
@@ -24,17 +24,17 @@ window {
 }
 
 mainbox {
-    padding:    12px;
+    padding: 14px;
 }
 
 inputbar {
     background-color:   @bg0;
-    border-color:       @bg2;
-    border:         2px;
-    border-radius:  6px;
+    border-color:       @fg3;
+    border:         1px;
+    border-radius:  5px;
     padding:    8px 16px;
     spacing:    8px;
-    children:   [ prompt, entry ];
+    children:   [ entry ];
 }
 
 prompt {
@@ -42,7 +42,7 @@ prompt {
 }
 
 entry {
-    placeholder:        " Application";
+    placeholder:        "";
     placeholder-color:  @fg3;
 }
 
@@ -86,10 +86,11 @@ element selected normal, element selected active {
 }
 
 element-icon {
-    size:           1em;
+    size:           1.5em;
     vertical-align: 0.5;
 }
 
 element-text {
     text-color: inherit;
+    vertical-align: 0.5;
 }

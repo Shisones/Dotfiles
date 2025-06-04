@@ -1,0 +1,34 @@
+(defwidget activate-linux []
+  (box
+    :orientation "v"
+    :halign "start"
+    :valign "start"
+    (label :xalign 0 :markup "<span font_size=\"large\">Activate Linux</span>")
+    (label :xalign 0 :text "Go to Settings to activate Linux")))
+
+(defwindow activate-linux
+  :monitor 0
+  :stacking "fg"
+  :geometry (geometry :x "8px" :y "32px" :width "250px" :anchor "bottom right")
+  (activate-linux))
+
+(defwindow example
+           :monitor 0
+           :geometry (geometry :x "0%"
+                               :y "20px"
+                               :width "10%"
+                               :height "30px"
+                               :anchor "top center")
+           :stacking "fg"
+           :reserve (struts :distance "40px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+      (greeter :text "Say hello!"
+           :name "Tim"))
+
+(defwidget greeter [?text name]
+  (box :orientation "horizontal"
+       :halign "center"
+    text
+    (button :onclick "notify-send 'Hello' 'Hello, ${name}'"
+      "Greet")))

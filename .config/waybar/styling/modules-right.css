@@ -1,8 +1,8 @@
 /* modules-right.css */
 
 .modules-right {
-    margin: 10px 10px 0 0;
-    padding: 0 0 0 0;
+    margin: 0 10px 0 0;
+    padding: 1px;
     background-color: @module_bg;
     border: 1px solid @module_border;
     border-radius: 10px;
@@ -70,6 +70,13 @@
     padding: 0px 6px;
 }
 
+#pulseaudio.muted {
+    background-color: transparent;
+    padding: 0px 6px;
+    color: @text_color;
+}
+
+
 #pulseaudio:hover {
     background-color: @hover_bg;
     margin: 3px 0px;
@@ -100,28 +107,5 @@
     color: @hover_col;
 }
 
-#custom-media {
-    background-color: transparent;
-    padding: 0px 6px;
-    margin: 3px 0px 3px 2px;
-}
-
-#custom-media:hover {
-    background-color: @hover_bg;
-    border-radius: 7px;
-}
-
-#custom-media-logo {
-    background-color: @hover_bg;
-    color: @media_color;
-    border-radius: 7px;
-    margin: 3px 1px 3px 3px;
-    padding: 1px 4px 1px 4px;
-}
-
-#custom-media-logo:hover {
-    background-color: @media_color;
-    color: @hover_col;
-}
 
 

@@ -23,7 +23,7 @@ by Stephan Raabe (2023)
 }
 
 window {
-	background-color: rgba(20, 20, 20, 0.5);
+	background-color: rgba(20, 20, 20, 0.4);
 	background-size: cover;
 	font-size: 16pt;
 }
@@ -37,9 +37,9 @@ button {
     	border-radius: 20px;
 	border: 2px;
     border-style: solid;
-    border-color: rgba(46, 52, 64, 0.8);
+    border-color: rgba(46, 52, 64, 0.4);
 	transition: all 0.3s cubic-bezier(.55, 0.0, .28, 1.682), box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
-    box-shadow: 0 0 5px #252A33; 
+    box-shadow: 0 0 5px rgba(37,42,51,0.4); 
 }
 
 /*button:focus {*/
@@ -48,7 +48,7 @@ button {
 /*}*/
 
 button:hover {
-    background-color: #252A33; 
+    background-color: rgba(37,42,51,1); 
 	opacity: 0.8;
     color: #C8D0E0;
     background-size: 30%;
@@ -57,7 +57,7 @@ button:hover {
     border-style: solid;
     border-color: #5E81AC;
     border-radius: 10px; 
-    box-shadow: 0 0 10px #252A33; 
+    box-shadow: 0 0 10px rgba(37,42,51,0.4); 
 }
 
 /* Adjust the size of the icon or content inside the button */

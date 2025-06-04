@@ -3,10 +3,9 @@
 /* General Waybar Rules */
 * {
     border: none;
-    font-family: "Inter","SauceCodeProNerdFontPropo", sans-serif;
-    font-size: 12px;
+    font-family: "Inter Semibold","SauceCodeProNerdFontPropo";
+    font-size: 13px;
     color: @text_color;
-    font-weight: bold;
 }
 
 tooltip {

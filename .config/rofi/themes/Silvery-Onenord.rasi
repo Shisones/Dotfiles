@@ -1,9 +1,9 @@
 
 * {
-    bg0:    #252A33;
-    bg1:    #2E3440F0;
-    bg2:    #363E4BF0;
-    bg3:    #5E81ACF2;
+    bg0:    #252A33D9;
+    bg1:    #2E3440D9;
+    bg2:    #363E4BD9;
+    bg3:    #5E81ACF0;
     fg0:    #B9C1D0;
     fg1:    #E5E9F0;
     fg2:    #C8D0E0;

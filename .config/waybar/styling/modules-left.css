@@ -1,12 +1,33 @@
 /* modules-left.css */
 
 .modules-left {
-    margin: 10px 0 0 10px;
-    padding: 0 0 0 0;
+    margin-left: 10px;
+    padding: 1px;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 2px 0 @shadow;
+}
+
+/* Groups */
+#system {
     background-color: @module_bg;
     border: 1px solid @module_border;
     border-radius: 10px;
     box-shadow: 0 0 2px 0 @shadow;
+}
+
+#tray {
+    background-color: white;
+    margin-left: 5px;
+    padding: 3px;
+    border-radius: 10px;
+    box-shadow: none;
+}
+
+
+#workspaces {
+    padding-right: 3px;
 }
 
 #workspaces button {
@@ -42,12 +63,6 @@
     padding: 0 6px 0 6px;
 }
 
-#custom-name:hover {
-    background-color: @hover_bg;
-    border-radius: 7px;
-    margin: 3px 1px;
-}
-
 @keyframes blink-update {
     to {
         color: @power_color;
@@ -58,7 +73,7 @@
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    padding: 0px 0px 0px 3px;
+    padding: 0;
     margin: 1px 0px;
 }
 

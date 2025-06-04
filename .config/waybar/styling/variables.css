@@ -1,15 +1,15 @@
 /* variables.css */
 
 @define-color text_color rgb(229, 233, 240);
-@define-color tooltip_bg rgba(37, 42, 52, 0.90);
-@define-color tooltip_border rgba(76, 86, 106, 0.85);
+@define-color tooltip_bg rgba(37, 42, 52, 0.75);
+@define-color tooltip_border rgba(76, 86, 106, 0.80);
 
 @define-color module_bga rgba(37, 42, 51, 0.85);
-@define-color module_bg rgba(46, 52, 64, 0.85);
-@define-color module_border rgba(76, 86, 106, 0.85);
+@define-color module_bg rgba(46, 52, 64, 0.65);
+@define-color module_border rgba(76, 86, 106, 0.80);
 
-@define-color hover_bg rgba(76, 86, 106, 0.85);
-@define-color hover_col rgba(37, 42, 51, 0.85);
+@define-color hover_bg rgba(76, 86, 106, 0.80);
+@define-color hover_col rgba(37, 42, 51, 0.80);
 
 @define-color focused_bg rgb(94, 129, 172);
 
@@ -23,3 +23,7 @@
 @define-color distro_color rgb(136, 192, 208);
 
 @define-color shadow rgba(0, 0, 0, 0.5); /* Box shadow */
+
+/* Colors */
+@define-color fg_text rgb(229, 233, 240);
+@define-color border rgba(76, 86, 106, 0.80);

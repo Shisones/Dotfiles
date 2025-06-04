@@ -1,11 +1,11 @@
 /* modules-center.css */
 
 .modules-center {
-    margin: 10px 0 0 0;
+    margin: 0 0 0 0;
     background-color: @module_bg;
     border: 1px solid @module_border;
     border-radius: 10px;
-    padding: 0 0px;
+    padding: 1px;
     box-shadow: 0 0 2px 0 @shadow;
     
 }

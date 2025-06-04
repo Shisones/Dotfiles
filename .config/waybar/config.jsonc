@@ -1,13 +1,12 @@
 {
-    "layer": "top",
+    "layer": "bottom",
     "position": "top",
     "spacing": 1,
+    "margin-top": 10,
 
     "modules-left": [
-        "custom/distro",
-        "group/systray", 
-        "hyprland/workspaces", 
-        "custom/pacman"
+        "group/system",
+        "tray"
     ],
     "modules-center": [
         "power-profiles-daemon",
@@ -19,24 +18,19 @@
         "custom/power"
     ],
     
-    "group/systray": {
+    "group/system": {
         "orientation": "inherit",
-        "drawer": {
-            "transition-duration": 500,
-            "children-class": "tray-open",
-            "transition-left-to-right": true,
-            "click-to-reveal": true
-        },
         "modules": [
-            "custom/name",
-            "tray"
+            "custom/distro",
+            "custom/name", 
+            "hyprland/workspaces", 
+            "custom/pacman"
         ]
     },
 
     "group/sysinfo": {
         "orientation": "inherit",
         "modules": [
-            "backlight",
             "bluetooth",
             "pulseaudio",
             "network",
@@ -74,14 +68,14 @@
     },
 
     "tray": {
-         "icon-size": 16,
+         "icon-size": 18,
          "spacing": 5
     },
 
     "network": {
         "format-wifi": "  {essid}",
         "format-ethernet": "  Ethernet",
-        "format-disconnected": " ", 
+        "format-disconnected": "  Disconnected", 
         "max-length": 50,
         "tooltip-format": "󰩟  {ipaddr}\n  {bandwidthUpBits}\n  {bandwidthDownBits}",
         "on-click": "nm-connection-editor"
@@ -102,21 +96,7 @@
                 "weekdays":   "<span color='#5E81AC'><b>{}</b></span>",
                 "today":      "<span color='#BF616A'><b><u>{}</u></b></span>"
             }
-        },
-        "format-alt": "{:%A, %d %B %Y}",
-        "on-click-right": "korganizer"
-    },
-
-    "cpu": {
-        "format": "{usage}%  ",
-        "tooltip": false,
-        "on-click": "alacritty -e btop"
-    },
-
-    "memory": {
-        "format": "󰑭  {}%",
-        "tooltip": false,
-        "on-click": "alacritty -e btop"
+        }
     },
 
     "backlight": {
@@ -134,11 +114,13 @@
         },
         "format": "{icon}   {capacity}%",
         "format-icons": ["", "", "", "", ""],
-        "max-length": 25
+        "tooltip-format": "󰔚  {timeTo}\n  Health: {health}%",
+        "max-length": 25,
+        "on-click": ""
     },
 
     "bluetooth": {
-        "format": "  {status}",
+        "format": "  BT {status}",
         "format-connected": "  {device_alias}",
         "format-connected-battery": "  {device_alias} {device_battery_percentage}%",
         "tooltip-format": "󰾰  {controller_alias}\t{controller_address}\n\n{num_connections} connected",
@@ -152,7 +134,7 @@
         "format": "{icon}  {volume}%",
         "format-bluetooth": "{icon}  {volume}% ({format_source})",
         "format-bluetooth-muted": "{icon}  0% ({format_source})",
-        "format-muted": "  {volume}%",
+        "format-muted": "  {volume}%",
         "format-source": "",
         "format-source-muted": "",
         "format-icons": {
@@ -191,7 +173,7 @@
 
     "custom/name": {
         "format": "Shisones Markov",
-        "tooltip-format": "Click to expand systray" 
+        "tooltip": false 
     },
 
     "custom/media-logo": {
