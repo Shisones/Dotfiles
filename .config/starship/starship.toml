@@ -22,8 +22,8 @@ trim_at = "."
 disabled = false
 
 [character]
-success_symbol = "[󰁕](white)"
-error_symbol = "[󰁕](white)"
+success_symbol = "[󰁕](white bold)"
+error_symbol = "[󰁕](white bold)"
 
 [time]
 disabled = true
@@ -44,6 +44,6 @@ disabled = true
 style = "bold italic red"
 
 [python]
-symbol = "  "
+symbol = " "
 style = "(bg:#42495A)"
 format = "[${symbol}(\\($virtualenv\\))]($style)"

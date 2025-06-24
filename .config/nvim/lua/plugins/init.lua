@@ -78,5 +78,16 @@ return {
     cmd = "ShowkeysToggle",
   },
 
+  {
+    "mason-org/mason-lspconfig.nvim",
+    cmd = "LspInstall",
+    opts = {},
+    dependencies = {
+    { "mason-org/mason.nvim", opts = {} },
+      "neovim/nvim-lspconfig",
+    },
+  },
+
+  { import = "nvchad.blink.lazyspec" }
 
 }

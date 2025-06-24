@@ -3,13 +3,13 @@ alias ls='lsd --color=auto --group-directories-first'
 alias la='ls -a'
 alias ll='ls -l'
 alias lcf='ls -CF'
-alias find='find . | grep '
 alias hist='history'
 
 # Directory-related commands
 alias home='cd'
 alias docs='cd ~/Documents'
 alias downloads='cd ~/Downloads'
+alias dots='cd ~/Dotfiles/'
 alias ..='cd ..'
 
 # Pacman-related commands

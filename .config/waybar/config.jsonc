@@ -68,8 +68,9 @@
     },
 
     "tray": {
-         "icon-size": 18,
+         "icon-size": 20,
          "spacing": 5
+         
     },
 
     "network": {

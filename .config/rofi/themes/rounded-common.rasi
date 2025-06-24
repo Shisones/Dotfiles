@@ -42,7 +42,7 @@ prompt {
 }
 
 entry {
-    placeholder:        "";
+    placeholder:        " Run Application";
     placeholder-color:  @fg3;
 }
 

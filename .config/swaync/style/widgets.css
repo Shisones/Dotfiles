@@ -49,10 +49,11 @@
   border: 1px solid @polar-night-5;
 }
 
+
 .widget-mpris .widget-mpris-player {
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   color: @white;
-  padding: 7px;
 }
 
 .widget-mpris .widget-mpris-title {

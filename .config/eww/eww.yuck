@@ -1,34 +1,52 @@
-(defwidget activate-linux []
-  (box
-    :orientation "v"
-    :halign "start"
-    :valign "start"
-    (label :xalign 0 :markup "<span font_size=\"large\">Activate Linux</span>")
-    (label :xalign 0 :text "Go to Settings to activate Linux")))
-
-(defwindow activate-linux
-  :monitor 0
-  :stacking "fg"
-  :geometry (geometry :x "8px" :y "32px" :width "250px" :anchor "bottom right")
-  (activate-linux))
-
-(defwindow example
-           :monitor 0
-           :geometry (geometry :x "0%"
-                               :y "20px"
-                               :width "10%"
-                               :height "30px"
-                               :anchor "top center")
-           :stacking "fg"
-           :reserve (struts :distance "40px" :side "top")
-           :windowtype "dock"
-           :wm-ignore false
-      (greeter :text "Say hello!"
-           :name "Tim"))
-
 (defwidget greeter [?text name]
-  (box :orientation "horizontal"
-       :halign "center"
-    text
-    (button :onclick "notify-send 'Hello' 'Hello, ${name}'"
-      "Greet")))
+    (box 
+        :orientation "vertical"
+        :halign "center"
+        :class "greeter-container"
+        text
+        (button 
+            :onclick "notify-send 'Test' 'Testing ${name}'"
+            "Pizdec Nahren"
+        )
+    )
+)
+
+(defwidget something [things]
+    (box
+        :orientation "vertical"
+        :class "something-box"
+        things
+        (children)
+    )
+)
+
+(defwindow test
+    :monitor 0
+    :geometry
+    (geometry
+        :x "0%"
+        :y "20px"
+        :height "50px"
+        :width "250px"
+        :anchor "top right"
+    )
+    :class "test-window"
+    :stacking "fg"
+    (something 
+        :things username
+        (button
+            :onclick "notify-send 'Testing'"
+            "Testing"
+        )
+    )
+)
+
+(defvar username "Placeholder")
+
+
+(defvar time-visible false) 
+
+(defpoll time :interval "1s"
+              :initial "initial-value"
+              :run-while time-visible
+  `whoami`)
