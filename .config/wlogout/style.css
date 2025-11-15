@@ -23,7 +23,7 @@ by Stephan Raabe (2023)
 }
 
 window {
-	background-color: rgba(20, 20, 20, 0.4);
+	background-color: rgba(20, 20, 20, 0);
 	background-size: cover;
 	font-size: 16pt;
 }

@@ -44,6 +44,6 @@ disabled = true
 style = "bold italic red"
 
 [python]
-symbol = " "
+symbol = "  "
 style = "(bg:#42495A)"
 format = "[${symbol}(\\($virtualenv\\))]($style)"
