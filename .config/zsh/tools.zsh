@@ -1,5 +1,4 @@
 # External tool initializations
-eval "$(thefuck --alias)"
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 

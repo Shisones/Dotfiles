@@ -109,6 +109,13 @@ return {
       },
     },
   },
+  
+  {
+    'MeanderingProgrammer/render-markdown.nvim',
+    lazy = false,
+    dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-mini/mini.nvim' },
+    opts = {},
+  },
 
   { import = "nvchad.blink.lazyspec" },
 }

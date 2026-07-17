@@ -1,0 +1,19 @@
+layout {
+    pane split_direction="vertical" {
+        // left: python c2 server
+        pane name="C2 Server" cwd="server" command="python3" {
+            args "server.py" "${c2_port}" "${endpoint_smile}" "${endpoint_cheese}"
+        }
+        
+        // right: split horizontal
+        pane split_direction="horizontal" {
+            // top right: msf handler
+            pane name="MSF Handler" cwd="server" command="msfconsole" {
+                args "-q" "-x" "use exploit/multi/handler; set payload ${payload_type}; set lhost 0.0.0.0; set lport ${lport}; set exitonsession false; exploit -j"
+            }
+            
+            // bottom right: operator console
+            pane name="Operator Console" focus=true
+        }
+    }
+}
