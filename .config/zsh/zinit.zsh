@@ -15,3 +15,8 @@ zinit light zsh-users/zsh-autosuggestions
 (( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[path]=none
 ZSH_HIGHLIGHT_STYLES[path_prefix]=none
+ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=red
+ZSH_HIGHLIGHT_STYLES[command]=fg=green
+
+# Initialize completions (after zsh-completions plugin is loaded)
+autoload -Uz compinit && compinit -C

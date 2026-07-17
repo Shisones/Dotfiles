@@ -1,10 +1,11 @@
 format = """
-[ $username@$hostname ](bg:#42495A)[](fg:#42495A bg:#363E4B)[$time$directory$python ](bg:#363E4B)[](fg:#363E4B)
+[ $username@$hostname ](bg:#42495A)[](fg:#42495A bg:#363E4B)[$time$directory$status ](bg:#363E4B)[](fg:#363E4B)
  $character
 """
 [localip]
 ssh_only = true
-format = '[$localipv4](bold red)'
+format = '$localipv4'
+style = "fg:#81A1C1"
 disabled = false
 
 [username]
@@ -35,7 +36,7 @@ format = " \\[[$read_only](bold red)[$path]($style)\\]"
 read_only = "󰌾 "
 truncation_length = 3
 truncate_to_repo = true
-style = "fg:bold white bg:#363E4B"
+style = "fg:white bold bg:#363E4B"
 
 [cmd_duration]
 min_time = 4
@@ -43,7 +44,9 @@ show_milliseconds = false
 disabled = true
 style = "bold italic red"
 
-[python]
-symbol = "  "
-style = "(bg:#42495A)"
-format = "[${symbol}(\\($virtualenv\\))]($style)"
+[status]
+disabled = true
+style = "fg:#BF616A bg:#363E4B"
+format = "[ $symbol$status_common_reason]($style)"
+map_symbol = true
+pipestatus = false
