@@ -35,31 +35,3 @@ require "nvchad.autocmds"
 vim.schedule(function()
   require "mappings"
 end)
-
--- Neovide specific
-if vim.g.neovide then
-  vim.o.guifont = "SauceCodePro Nerd Font:h10:bold"
-  vim.g.neovide_opacity = 0.90
-  vim.g.neovide_padding_top = 5
-  vim.g.neovide_padding_bottom = 5
-  vim.g.neovide_padding_right = 5
-  vim.g.neovide_padding_left = 5
-  vim.g.neovide_cursor_vfx_mode = ""
-  vim.g.neovide_scroll_animation_length = 0.05
-  vim.g.neovide_cursor_animation_length = 0.05
-  vim.g.neovide_remember_window_size = true
-  vim.g.neovide_cursor_antialiasing = false
-
-  vim.api.nvim_set_keymap('v', '<sc-c>', '"+y', {noremap = true})
-  vim.api.nvim_set_keymap("v", "<sc-c>", '"+y', { noremap = true }) -- Select line(s) in visual mode and copy (CTRL+Shift+V)
-  vim.api.nvim_set_keymap("i", "<sc-v>", '<ESC>"+p', { noremap = true }) -- Paste in insert mode (CTRL+Shift+C)
-  vim.api.nvim_set_keymap("n", "<sc-v>", '"+p', { noremap = true }) -- Paste in normal mode (CTRL+Shift+C)
-  vim.cmd [[
-    highlight Normal guibg=#2E3440
-    highlight NormalNC guibg=#2E3440
-    highlight LineNr guibg=#2E3440
-    highlight SignColumn guibg=#2E3440
-    highlight VertSplit guibg=#2E3440
-  ]]
-end
-

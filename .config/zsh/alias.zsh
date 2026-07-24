@@ -1,11 +1,12 @@
-# GNU Coreutils config
+# Modern alternatives
 alias ls='lsd --color=auto --group-directories-first'
 alias grep='grep --color=auto'
 alias ip='ip -color=auto'
 alias cat='bat --theme TwoDark'
 alias cd='z'
+alias nv='nvim'
 
-# Fuzzy Finder
+# Fun stuffs
 alias preview='fzf --preview="bat {}"'
 
 

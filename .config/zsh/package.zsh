@@ -31,35 +31,35 @@ function _pkg_run() {
     _pkg_flags $pm
 
     case $1 in
-        install)   shift; $sudo $pm $pm_install "$@" ;;
-        uninstall) shift; $sudo $pm $pm_remove "$@"  ;;
+        install)  shift;  $sudo $pm $pm_install "$@" ;;
+        remove)   shift;  $sudo $pm $pm_remove "$@"  ;;
         update)           $sudo $pm $pm_update       ;;
         upgrade)          $sudo $pm $pm_upgrade      ;;
-        search)   shift;         $pm $pm_search "$@" ;;
+        search)   shift;        $pm $pm_search "$@" ;;
         clean)            $sudo $pm $pm_clean        ;;
-        list)                     $pm $pm_list       ;;
-        info)     shift;         $pm $pm_info "$@"   ;;
-        *)                     $pm "$@"              ;;
+        list)                   $pm $pm_list       ;;
+        info)     shift;        $pm $pm_info "$@"   ;;
+        *)                      $pm "$@"              ;;
     esac
 }
 
-function _pkg_aur() {
+function aur() {
     local aur
     if   command -v paru &>/dev/null; then aur=paru
     elif command -v yay  &>/dev/null; then aur=yay
-    else echo "pkg aur: no AUR helper found (install paru or yay)" >&2; return 1
+    else echo "aur: no AUR helper found (install paru or yay)" >&2; return 1
     fi
 
     case $1 in
-        install)   shift; $aur -S   "$@" ;;
-        uninstall) shift; $aur -Rns "$@" ;;
-        update)           $aur -Sy      ;;
-        upgrade)          $aur -Syu     ;;
-        search)   shift; $aur -Ss  "$@" ;;
-        clean)            $aur -Scc     ;;
-        list)             $aur -Qem     ;;
-        info)     shift; $aur -Qi  "$@" ;;
-        *)                $aur "$@"     ;;
+        install)  shift; $aur -S   "$@" ;;
+        remove)   shift; $aur -Rns "$@" ;;
+        update)          $aur -Sy      ;;
+        upgrade)         $aur -Syu     ;;
+        search)   shift; $aur -Ss "$@" ;;
+        clean)           $aur -Scc     ;;
+        list)            $aur -Qem     ;;
+        info)     shift; $aur -Qi "$@" ;;
+        *)               $aur "$@"     ;;
     esac
 }
 
@@ -67,8 +67,5 @@ function pkg() {
     local pm=$(_pkg_detect)
     [[ -z $pm ]] && { echo "pkg: no supported package manager found" >&2; return 1 }
 
-    case $1 in
-        aur) shift; _pkg_aur "$@" ;;
-        *)   _pkg_run $pm "$@"   ;;
-    esac
+    _pkg_run $pm "$@"
 }
