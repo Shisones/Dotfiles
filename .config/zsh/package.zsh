@@ -15,7 +15,7 @@ function _pkg_flags() {
         apt)    pm_install="install"; pm_remove="remove"; pm_update="update"; pm_upgrade="upgrade"
                 pm_search="search"; pm_clean="autoclean"; pm_list="list --installed"; pm_info="show" ;;
         dnf)    pm_install="install"; pm_remove="remove"; pm_update="makecache"; pm_upgrade="upgrade"
-                pm_search="search"; pm_clean="clean all"; pm_list="list installed"; pm_info="info" ;;
+                pm_search="search"; pm_clean="clean all"; pm_list="list --installed"; pm_info="info" ;;
         zypper) pm_install="install"; pm_remove="remove"; pm_update="refresh"; pm_upgrade="update"
                 pm_search="search"; pm_clean="clean"; pm_list="se --installed-only"; pm_info="info" ;;
     esac
