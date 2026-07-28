@@ -1,6 +1,7 @@
 # pkg — distro-agnostic package manager wrapper
 
 function _pkg_detect() {
+    command -v waka   &>/dev/null && echo "waka"   && return
     command -v pacman &>/dev/null && echo "pacman" && return
     command -v apt    &>/dev/null && echo "apt"    && return
     command -v dnf    &>/dev/null && echo "dnf"    && return
@@ -10,6 +11,8 @@ function _pkg_detect() {
 
 function _pkg_flags() {
     case $1 in
+        waka)   pm_install="install"; pm_remove="remove"; pm_update="update"; pm_upgrade="upgrade"
+                pm_search="search"; pm_clean="clean"; pm_list="list"; pm_info="info" ;;
         pacman) pm_install="-S"; pm_remove="-Rns"; pm_update="-Sy"; pm_upgrade="-Syu"
                 pm_search="-Ss"; pm_clean="-Scc"; pm_list="-Qen"; pm_info="-Qi"    ;;
         apt)    pm_install="install"; pm_remove="remove"; pm_update="update"; pm_upgrade="upgrade"
